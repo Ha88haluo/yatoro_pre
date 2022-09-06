@@ -1,0 +1,403 @@
+@charset "utf-8";
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  
+}
+
+ /* Firefox */
+ * {
+  scrollbar-width: thin;
+  scrollbar-color: #c82627 #e7e7e7c0;
+}
+
+/* Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+
+*::-webkit-scrollbar-track {
+  background: #cec2c2;
+  box-shadow:0 0 5px #bdb9b9 inset ;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: #c82627;
+  box-shadow:0 0 5px #a09696 inset ;
+
+}
+
+
+body {
+  background-color: #f5f5f5;
+	position: relative;
+  display: none;
+}
+.text-combine {
+  -webkit-text-combine: horizontal;
+  -ms-text-combine-horizontal: all;
+  text-combine-upright: all;
+}
+#wrapper {
+  max-width: 1920px;
+  max-height: 850px;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+}
+
+#stalker{
+	  pointer-events: none;
+  position: fixed;
+  top: -10px;
+  left: -10px;
+  width: 20px;
+  height: 20px; 
+  border: solid 1px #c82627;
+  border-radius: 50%;
+  transform: translate(0, 0);
+  transition: transform 0.2s;
+  transition: 0.3s;
+  transition-timing-function: ease-out;
+  z-index: 999;
+}
+
+#stalker.is_active {
+    top: -40px;
+    left: -40px;
+    width: 50px;
+    height: 50px;
+    transition: 0.5s;
+	border:solid 1px #c82627;}
+
+
+
+#headerLogo {
+  width: 80px;
+  height: 70px;
+}
+header {
+  width: 9vw;
+  height: 100vh;
+  padding-right: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+	align-items: center;
+	z-index: 5;
+	background-color: #f5f5f5;
+	
+}
+h1 {
+  width: 80px;
+  height: 250px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+h1 img {
+  width: 40px;
+  height: 250px;
+}
+h2 {
+  font-size: 20px;
+  font-family: 'Sawarabi Mincho', serif;
+  color: #c82627
+}
+#subTitle {
+	height: 100vh;
+  writing-mode: vertical-rl;
+  font-size: 18px;
+  color: #2f2f2b;
+  padding-top: 18vh;
+  padding-right: 5vw;
+  padding-left: 3.6vw;
+	font-family: 'Noto Serif JP', serif;
+  line-height: 30px;
+  letter-spacing: 0.2em;
+	z-index: 5;
+	background-color: #f5f5f5;
+}
+#subTitle p:nth-child(2) {
+  text-indent: 3em;
+}
+#nStory span {
+  display: inline-block;
+	margin-top: 2px;
+  margin-bottom: 1px;
+}
+#aboutKanbayashi {
+  color: #7d7d78;
+  font-size: 12px;
+  margin-top: 3.5vh;
+  margin-bottom: 1.5vh;
+  font-family: 'Sawarabi Mincho', serif;
+  line-height: 1.2;
+}
+
+
+nav {
+  flex-grow: 0;
+  writing-mode: vertical-rl;
+  height: 100vh;
+	right: -24%;
+	position: fixed;
+	background-color: #f5f5f5;
+  padding-top: 15vh;
+  padding-bottom: 20vh;
+	padding-right: 3vw;
+	padding-left: 30px;
+  font-family: 'Noto Serif JP', serif;
+	z-index: 3;
+}
+
+nav li {
+  display: flex;
+  list-style-type: none;
+  font-size: 16px;
+  padding-left: 3vw;
+}
+
+#Gnav li:nth-child(1)
+{
+color: #c82627;
+}
+
+nav a {
+  text-decoration: none;
+  color: #2f2f2b;
+  display: block;
+  transition: 0.3s
+}
+nav a:hover {
+  color: #c82627;
+  cursor: pointer;
+  transition: 0.4s
+}
+nav li:hover {
+  color: #c82627;
+  cursor: pointer;
+  transition: 0.4s
+}
+.flexGrow01 {
+  flex-grow: 0;
+	padding-bottom: 2px;
+}
+.flexGrow02 {
+  flex-grow: 1;
+  background-image: linear-gradient(to bottom, #7d7d78, #7d7d78 2px, #f5f5f5 2px, #f5f5f5 4px);
+  background-size: 2px 4px;
+  background-repeat: repeat-y;
+  background-position: center;
+}
+.flexGrow03 {
+  flex-grow: 0;
+  font-size: 12px;
+	padding-top: 2px;
+}
+
+nav button{
+	margin-right: 30px;
+	display: block;
+	position: absolute;
+	background-color:transparent;
+	top:50%;
+	padding: 5px;
+	border-style: none;
+	opacity: 0.6;
+}
+
+button:hover{
+	opacity: 1;
+	transition: 1.2s;
+}
+
+
+#storyTitle{
+margin-right: 30vh;
+margin-top: 17vh;
+}
+
+#storyTitle p{
+font-size: 18px;
+line-height: 3;
+writing-mode: vertical-rl;
+  font-family: 'Noto Serif JP', serif;
+}
+	
+#story{
+  writing-mode: vertical-rl;
+  font-family: 'Noto Serif JP', serif;
+height: 70vh;
+width: 15vw;
+margin-top: 20vh;
+margin-right: 1.5vw;
+margin-left: 15vw;
+overflow: scroll visible;
+}
+
+#thought{
+  font-size: 16px;
+  padding-left: 20px;
+}
+
+#nStory{
+  
+height: 60vh;
+margin-top: 5vh;
+margin-left: 5vw;
+
+}
+
+
+#nStory p{
+
+  font-size: 13px;
+  font-weight: lighter;
+line-height: 3;
+}
+
+#nStory p:nth-child(3){
+  text-align: end;
+}
+
+
+#forEngrish{
+	height: 100vh;
+	width: 15vw;
+  padding-top: 20vh;
+  font-family: 'Sawarabi Mincho', serif;
+  margin-left: 1vw;
+}
+
+#thanksImage{
+ background-image: url("../../images/thanks.jpg");
+  background-size: cover;
+background-repeat: no-repeat;
+background-position: top;
+width: 20vw;
+height: 25vh;
+}
+
+#forEngrish p{
+  height: 20vh;
+  width: 17vw;
+  font-size: 12px;
+  margin-top: 5vh;
+  padding-top: 30px;
+  padding-left: 1.5vw;
+  padding-right: 1.5vw;
+  overflow: visible scroll;
+}
+
+
+
+#toolImage{
+ margin-left: 10vw;
+ margin: 50vh auto 10vw auto;
+}
+
+#toolImage img{
+  width: 13vw;
+}
+
+aside{
+  position: relative;
+}
+
+.backIcon{
+  position: absolute;
+  top: -20%;
+  left: -100%;
+}
+
+
+
+
+aside ul {
+  display: flex;
+  justify-content: flex-start;
+}
+aside ul li {
+  list-style-type: none;
+	padding-right: 5px;}
+	
+
+aside a {
+  text-decoration: none;
+ /* color: black;*/
+}
+
+.asideIcon:nth-child(odd){
+	position: relative;
+	display: block;
+}
+
+.asideIcon img:nth-child(even){
+	position: absolute;
+	top:40%;
+	left: 40%;
+	transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+	width: 100%;
+	display: block;}
+
+.asideIcon:hover img:nth-child(odd) {
+	opacity: 0;
+transition: 1s ease-out;
+	transition: 1s ease-out;}
+
+.asideIcon:hover img:nth-child(even){
+	opacity: 1;
+transition: .4s ease-out;
+	transition: .4s ease-out;
+}
+
+
+.asideIcon img:nth-child(even) {
+	opacity: 0;
+	transition: .4s ease-out;}
+
+
+
+fotter {
+  writing-mode: vertical-rl;
+  background-color: white;
+  height: 100vh;
+  padding-left: 5px;
+  padding-bottom: 12px;	
+}
+#container {
+  display: flex;
+  justify-content: space-between;
+}
+fotter p {
+  font-size: 12px;
+  font-family: 'Noto Serif JP', serif;
+}
+fotter p:nth-child(2) {
+  text-indent: 1em;
+  line-height: 1em;
+  letter-spacing: 0.3em;
+}
+
+fotter p span {
+  display: inline-block;
+	margin-top: -15px;
+	margin-bottom: 3px;
+}
+
+
+
+#copyRight {
+  font-size: 12px;
+  font-family: 'Noto Serif JP', serif;
+}
+#copyRight p:nth-child(2) {
+  letter-spacing: 0.05em;
+}
